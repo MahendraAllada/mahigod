@@ -18,7 +18,7 @@ resource "aws_instance" "Dijango" {
    Name        = "Dijango"
    }
 provisioner "local-exec" {
-    command = "echo ${aws_instance.Dijango.public_ip} >> /var/lib/jenkins/workspace/terragods/publicip"
+    command = "echo ${aws_instance.Dijango.public_ip} >> /var/lib/jenkins/workspace/django/publicip"
 }
 
 #user_data = <<HEREDOC
